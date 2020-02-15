@@ -1,0 +1,21 @@
+.container {
+  display: block;
+  font-size: 14px;
+  height: 80px;
+  margin: 5px;
+}
+
+.labelError {
+  color: red;
+}
+
+.inputError {
+  border: 1px solid red;
+  color: red;
+}
+
+.paragraphError {
+  color: red;
+  margin-top: 5px;
+  margin-bottom: 0;
+}
