@@ -23,16 +23,27 @@ export default function Example(props) {
   return (
     <Send4InputGenerator
       id="number"
+      type="text"
       label="Number"
       lang="enUS"
       defaultValue={number}
       validation={(n) => !isNaN(n)}
       message="Not a number"
-      isRequired={false}
+      isRequired={true}
       onChange={(number) => setNumber(number)}
     />
   );
 }
+```
+
+## Output
+
+```html
+<div id="field-number">
+  <label>Number</label>
+  <input id="number" type="text" value="" required />
+  <p>Show error message (if you have)</p>
+</div>
 ```
 
 ## License
