@@ -1,4 +1,4 @@
-import locales from './locales';
+import locales from '../locales';
 
 describe('Locales unit test', () => {
   it('Should render default (enUS) if lang not exists', () => {

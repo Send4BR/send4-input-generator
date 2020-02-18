@@ -1,4 +1,5 @@
 .container {
+  position: relative;
   display: block;
   font-size: 14px;
   height: 80px;
@@ -18,4 +19,11 @@
   color: red;
   margin-top: 5px;
   margin-bottom: 0;
+}
+
+.counter {
+  position: absolute;
+  right: 5px;
+  bottom: 40px;
+  color: #686868;
 }
