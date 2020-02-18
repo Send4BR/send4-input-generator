@@ -1,6 +1,6 @@
 ## send4-input-generator
 > Create input field with validation and fully customized
-> DOC soon!
+> DOC soon!!
 
 [![NPM](https://img.shields.io/npm/v/send4-input-generator.svg)](https://www.npmjs.com/package/send4-input-generator) [![JavaScript Style Guide](https://img.shields.io/badge/code_style-standard-brightgreen.svg)](https://standardjs.com)
 
