@@ -1,6 +1,6 @@
 import React, { Component } from 'react'
 
-import Send4InputGenerator from 'send4-input-generator'
+import Input from 'send4-input-generator'
 
 export default class App extends Component {
   constructor(props) {
@@ -10,7 +10,7 @@ export default class App extends Component {
       number: '',
       email: '',
       cpf: '',
-      name: '',
+      name: ''
     };
 
     this.emailValidator = this.emailValidator.bind(this);
@@ -31,11 +31,11 @@ export default class App extends Component {
 
   cpfValidator(strCpf) {
     if (!/[0-9]{11}/.test(strCpf)) return false;
-    if (strCpf === "00000000000") return false;
+    if (strCpf === '00000000000') return false;
 
-    var soma = 0;
+    let soma = 0;
 
-    for (var i = 1; i <= 9; i++) {
+    for (let i = 1; i <= 9; i++) {
       soma += parseInt(strCpf.substring(i - 1, i)) * (11 - i);
     }
 
@@ -53,7 +53,7 @@ export default class App extends Component {
 
     soma = 0;
 
-    for (var i = 1; i <= 10; i++) {
+    for (let i = 1; i <= 10; i++) {
       soma += parseInt(strCpf.substring(i - 1, i)) * (12 - i);
     }
     resto = soma % 11;
@@ -73,46 +73,47 @@ export default class App extends Component {
 
   render() {
     return (
-      <div className="form">
-        <Send4InputGenerator
-          id="number"
-          label="Number"
-          lang="ptBR"
-          defaultValue={this.state.number}
+      <div className='form'>
+        <Input
+          inputId='number'
+          inputLabel='Number'
+          inputLang='ptBR'
+          inputValue={this.state.number}
           validation={this.onlyNumber}
-          message="Não é um número"
-          isRequired={false}
+          inputErrorMsg='Não é um número'
+          inputRequired={false}
           onChange={(number) => this.setState({ number })}
         />
-        <Send4InputGenerator
-          id="email"
-          label="Email"
-          lang="enUS"
-          placeholder="example@mail.com"
-          defaultValue={this.state.email}
+        <Input
+          inputId='email'
+          inputLabel='Email'
+          inputLang='enUS'
+          inputPlaceholder='example@mail.com'
+          inputValue={this.state.email}
           validation={this.emailValidator}
-          message="Email invalid"
-          isRequired={true}
+          inputErrorMsg='Email invalid'
+          inputRequired={true}
           onChange={(email) => this.setState({ email })}
         />
-        <Send4InputGenerator
-          id="cpf"
-          label="CPF"
-          lang="ptBR"
-          defaultValue={this.state.cpf}
+        <Input
+          inputId='cpf'
+          inputLabel='CPF'
+          inputLang='ptBR'
+          inputValue={this.state.cpf}
           validation={this.cpfValidator}
-          message="CPF inválido!"
-          maxLength={11}
-          isRequired={true}
+          inputErrorMsg='CPF inválido!'
+          inputMaxLength={11}
+          inputRequired={true}
           onChange={(cpf) => this.setState({ cpf })}
         />
-        <Send4InputGenerator
-          id="name"
-          label="Name"
-          lang="esES"
-          defaultValue={this.state.name}
-          minLength={4}
-          isRequired={true}
+        <Input
+          inputId='name'
+          inputLabel='Name'
+          inputLang='esES'
+          inputValue={this.state.name}
+          inputMinLength={4}
+          inputMaxLength={20}
+          inputRequired={true}
           onChange={(text) => this.setState({ name: text })}
         />
       </div>
