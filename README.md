@@ -1,16 +1,15 @@
-## send4-input-generator
-> Create input field with validation and fully customized<br/>
-> DOC soon!!
+## Send4 input generator
+> Create input field with validation . DOC soon!
 
 [![NPM](https://img.shields.io/npm/v/send4-input-generator.svg)](https://www.npmjs.com/package/send4-input-generator) [![JavaScript Style Guide](https://img.shields.io/badge/code_style-standard-brightgreen.svg)](https://standardjs.com)
 
-## Install
+### Install
 
 ```bash
 npm install --save send4-input-generator
 ```
 
-## Usage
+### Usage
 
 ```jsx
 import React, { useState } from 'react'
@@ -36,7 +35,7 @@ export default function Example(props) {
 }
 ```
 
-## Output
+### Output
 
 ```html
 <div id="field-number">
@@ -46,6 +45,6 @@ export default function Example(props) {
 </div>
 ```
 
-## License
+### License
 
 MIT © [Send4](https://github.com/send4store)
