@@ -1,0 +1,24 @@
+name: Send4 Input Generator - NPM Publish
+
+on:
+  push:
+    branches:
+      - master
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2
+      # setup node with version 12.x and NPM registry url
+      - uses: actions/setup-node@v1
+        with:
+          node-version: "12.x"
+          registry-url: "https://registry.npmjs.org"
+
+      - run: npm install
+      - run: npm build
+      - run: npm publish --access public
+      
+        env:
+          NODE_AUTH_TOKEN: ${{secrets.NPM_TOKEN}}
