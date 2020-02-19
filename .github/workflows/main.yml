@@ -1,9 +1,8 @@
 name: Send4 Input Generator - NPM Publish
 
 on:
-  push:
-    branches:
-      - master
+  release:
+    types: [created]
 
 jobs:
   build:
