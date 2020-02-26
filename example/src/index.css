@@ -13,6 +13,10 @@ body {
   margin: 0 auto;
 }
 
+.form .form-section {
+  position: relative;
+}
+
 .form label {
   font-size: 12px;
 }
@@ -23,4 +27,5 @@ body {
 
 .form input {
   padding: 5px;
+  width: 100%;
 }

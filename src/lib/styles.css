@@ -1,9 +1,13 @@
 .container {
   position: relative;
-  display: block;
+  display: grid;
   font-size: 14px;
   height: 80px;
   margin: 5px;
+}
+
+.container input {
+  width: inherit;
 }
 
 .labelError {
@@ -24,6 +28,6 @@
 .counter {
   position: absolute;
   right: 5px;
-  bottom: 40px;
+  bottom: 30px;
   color: #686868;
 }

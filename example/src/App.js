@@ -10,7 +10,7 @@ export default class App extends Component {
       number: '',
       email: '',
       cpf: '',
-      name: ''
+      name: '',
     };
 
     this.emailValidator = this.emailValidator.bind(this);
@@ -73,50 +73,56 @@ export default class App extends Component {
 
   render() {
     return (
-      <div className='form'>
-        <Input
-          inputId='number'
-          inputLabel='Number'
-          inputLang='ptBR'
-          inputValue={this.state.number}
-          validation={this.onlyNumber}
-          inputErrorMsg='Não é um número'
-          inputRequired={false}
-          onChange={(number) => this.setState({ number })}
-        />
-        <Input
-          inputId='email'
-          inputLabel='Email'
-          inputLang='enUS'
-          inputPlaceholder='example@mail.com'
-          inputValue={this.state.email}
-          validation={this.emailValidator}
-          inputErrorMsg='Email invalid'
-          inputRequired={true}
-          onChange={(email) => this.setState({ email })}
-        />
-        <Input
-          inputId='cpf'
-          inputLabel='CPF'
-          inputLang='ptBR'
-          inputValue={this.state.cpf}
-          validation={this.cpfValidator}
-          inputErrorMsg='CPF inválido!'
-          inputMaxLength={11}
-          inputRequired={true}
-          onChange={(cpf) => this.setState({ cpf })}
-        />
-        <Input
-          inputId='name'
-          inputLabel='Name'
-          inputLang='esES'
-          inputValue={this.state.name}
-          inputMinLength={4}
-          inputMaxLength={20}
-          inputRequired={true}
-          onChange={(text) => this.setState({ name: text })}
-        />
-      </div>
+      <React.Fragment>
+        <div className='form'>
+          <div className='form-section'>
+            <Input
+              inputId='number'
+              inputLabel='Number'
+              inputLang='ptBR'
+              inputValue={this.state.number}
+              validation={this.onlyNumber}
+              inputErrorMsg='Não é um número'
+              inputRequired={false}
+              onChange={(number) => this.setState({ number })}
+            />
+            <Input
+              inputId='email'
+              inputLabel='Email'
+              inputLang='enUS'
+              inputPlaceholder='example@mail.com'
+              inputValue={this.state.email}
+              validation={this.emailValidator}
+              inputErrorMsg='Email invalid'
+              inputRequired={true}
+              onChange={(email) => this.setState({ email })}
+            />
+          </div>
+          <div className='form-section'>
+            <Input
+              inputId='cpf'
+              inputLabel='CPF'
+              inputLang='ptBR'
+              inputValue={this.state.cpf}
+              validation={this.cpfValidator}
+              inputErrorMsg='CPF inválido!'
+              inputMaxLength={11}
+              inputRequired={true}
+              onChange={(cpf) => this.setState({ cpf })}
+            />
+            <Input
+              inputId='name'
+              inputLabel='Name'
+              inputLang='esES'
+              inputValue={this.state.name}
+              inputMinLength={4}
+              inputMaxLength={20}
+              inputRequired={true}
+              onChange={(text) => this.setState({ name: text })}
+            />
+          </div>
+        </div>
+      </React.Fragment>
     )
   }
 }
