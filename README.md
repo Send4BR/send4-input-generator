@@ -27,10 +27,10 @@ export default function Example(props) {
       type="text"
       label="Leave a number"
       lang="ptBR" // Translate some default input errors.
-      inputValue={number}
+      value={number}
       validation={(n) => !isNaN(n)}
-      inputErrorMsg="Não é um número"
-      inputRequired={true}
+      errorMsg="Não é um número"
+      required={true}
       onChange={(number) => setNumber(number)}
     />
 
