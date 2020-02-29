@@ -8,15 +8,11 @@ export default function locales(lang) {
 
 const languages = {
   ptBR: {
-    REQUIRED: 'Obrigatório',
-    MINLENGTH: 'Tamanho é menor que %d'
+    REQUIRED: 'Por favor, preencha o campo.',
+    TOOSHORT: 'Tamanho é menor que %d.'
   },
   enUS: {
-    REQUIRED: 'Required',
-    MINLENGTH: 'Length is more less than %d'
-  },
-  esES: {
-    REQUIRED: 'Obligatorio',
-    MINLENGTH: 'Tamaño es inferior a %d'
+    REQUIRED: 'Please fill out this field.',
+    TOOSHORT: 'Length is more less than %d.'
   }
 };

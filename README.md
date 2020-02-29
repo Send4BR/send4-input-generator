@@ -20,16 +20,29 @@ export default function Example(props) {
   const [number, setNumber] = useState(null);
   
   return (
+    // Example using a validation func
     <Input
-      inputId="number"
-      inputType="text"
-      inputLabel="Number"
-      inputLang="enUS"
+      id="number"
+      type="text"
+      label="Leave a number"
+      lang="ptBR" // Translate some default input errors.
       inputValue={number}
       validation={(n) => !isNaN(n)}
-      inputErrorMsg="Not a number"
+      inputErrorMsg="Não é um número"
       inputRequired={true}
       onChange={(number) => setNumber(number)}
+    />
+
+    // Example using pattern
+    <Input
+      id="email"
+      label="Email"
+      placeholder="example@mail.com"
+      value={email}
+      pattern="^([a-z0-9_\-.+])+@([a-z0-9_\-.])+\.([a-z]{2,})$"
+      errorMsg="Email invalid"
+      required={true}
+      onChange={(email) => setEmail(email)}
     />
   );
 }
@@ -38,9 +51,9 @@ export default function Example(props) {
 ### Output
 
 ```html
-<div id="field-number">
-  <label>Number</label>
-  <input id="number" type="text" value="" required />
+<div class="input-default">
+  <label>Something</label>
+  <input id="something-id" name="something-name" type="text" value="" required />
   <p>Show error message (if you have)</p>
 </div>
 ```
