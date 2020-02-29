@@ -18,6 +18,7 @@ import Input from 'send4-input-generator'
 
 export default function Example(props) {
   const [number, setNumber] = useState(null);
+  const [email, setEmail] = useState(null);
   
   return (
     // Example using a validation func
