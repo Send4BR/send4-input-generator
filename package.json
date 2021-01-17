@@ -28,9 +28,9 @@
     "deploy": "gh-pages -d example/build"
   },
   "peerDependencies": {
-    "prop-types": "^15.5.4",
-    "react": "^16.8.0",
-    "react-dom": "^16.8.0"
+    "prop-types": "^15.7.2",
+    "react": "^17.0.1",
+    "react-dom": "^17.0.1"
   },
   "devDependencies": {
     "@commitlint/cli": "^8.3.5",
@@ -42,7 +42,7 @@
     "babel-preset-env": "^1.7.0",
     "babel-preset-react": "^6.24.1",
     "babel-preset-stage-0": "^6.24.1",
-    "commitizen": "^4.0.3",
+    "commitizen": "^4.2.3",
     "cross-env": "^5.1.4",
     "cz-conventional-changelog": "^3.1.0",
     "eslint": "^5.0.1",
@@ -55,9 +55,9 @@
     "eslint-plugin-standard": "^3.1.0",
     "gh-pages": "^1.2.0",
     "husky": "^4.2.3",
-    "react": "^16.4.1",
-    "react-dom": "^16.4.1",
-    "react-scripts": "^3.4.1",
+    "react": "^17.0.1",
+    "react-dom": "^17.0.1",
+    "react-scripts": "^4.0.1",
     "rollup": "^0.64.1",
     "rollup-plugin-babel": "^3.0.7",
     "rollup-plugin-commonjs": "^9.1.3",
